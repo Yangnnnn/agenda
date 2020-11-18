@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Todo</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="box" id="heading">
+    <h1><%= Today %></h1>
+
+  </div>
+
+
+<div class="box">
+  <%for(var i=0;i<Lists.length;i++){ %>
+    <div class="item">
+      <input type="checkbox">
+      <p><%= Lists[i] %></p>
+    </div>
+    <% } %>
+
+
+
+
+    <form action="/" method="post">
+      <input type="text" name="new" placeholder="New items">
+      <button type="submit" name="button">+</button>
+    </form>
+</div>
+
+
+
+
+
+
+  </body>
+
+  </html>
