@@ -55,7 +55,20 @@ app.get("/", function(req, res) {
   })
 
 })
+//
+app.post("/delete",function(req,res){
 
+  Item.findByIdAndDelete(req.body.checkbox,function(err,doc){
+    if(err){
+      console.log(err);
+    }
+    else{
+      console.log("Deleted");
+    }
+  })
+
+  res.redirect("/");
+})
 //
 
 app.listen(3000, function() {
